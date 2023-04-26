@@ -1,0 +1,27 @@
+#real-alert {
+    outline: black;
+    outline-style: solid;
+    outline-width: 5px;
+    padding: 20px;
+    font-size: 30px;
+    background-color: red;
+    color: white;
+    margin: 30px;
+}
+
+#test-only {
+    outline: black;
+    outline-style: solid;
+    outline-width: 5px;
+    padding: 20px;
+    font-size: 30px;
+    background-color: blue;
+    color: white;
+    margin: 30px;
+}
+
+h1 {
+    padding: 50px;
+    font-size: 50px;
+    font-weight: bold;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="conferance-style.css" type="text/css">
+</head>
+<body>
+
+<form>
+
+  <label for="registrant-name">Name: </label>
+  <input id="registrant-name" name="name" type="text" required maxlength="70"><br>
+
+  <label for="password">Password: </label>
+  <input id="password" name="user-password" type="password" required><br>
+
+  <label for="email">Email: </label>
+  <input id="email" type="email" required name="user-email"><br>
+
+  <label for="tshirt">T-Shirt Size: </label>
+  <select id="tshirt" required name="t-shirt">
+    <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+  </select><br>
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" type="date" required name="d-o-b"><br>
+
+  <label>Would you like to receive email updates?</label><br>
+  <label for="yes-choice">YES! I WOULD LOVE TO!!</label>
+  <input id="yes-choice" name="email-updates" type="radio" required><br>
+
+  <label for="no-choice">No, thank you</label>
+  <input id="no-choice" name="email-updates" type="radio" required><br>
+
+  <label>Which session(s) are you attending?</label><br>
+  <label for="morning">Morning</label>
+  <input id="morning" type="checkbox" name="morning-box"><br>
+
+  <label for="afternoon">Afternoon</label>
+  <input id="afternoon" type="checkbox" name="afternoon-box"><br>
+
+  <label for="special-requests">Do you have any special requests? If so, enter below:</label><br>
+  <textarea id="special-requests" rows="7" cols="70" name="requests"></textarea><br>
+
+  <input type="submit" id="submit" name="submit-button">
+
+
+</form>
+</body>
+</html>

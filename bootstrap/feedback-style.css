@@ -1,0 +1,10 @@
+.jumbotron {
+    font-family: 'Anton', sans-serif;
+    background-color: green;
+    color: wheat;
+}
+
+body {
+    font-family: 'Chivo Mono', monospace;
+    background-color: #7b9fb3;
+}

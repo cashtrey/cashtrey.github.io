@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <p>Enter some text to add to the list</p>
+    <input id="new-text"></input>
+    <button id="add-text">Add</button>
+    <button id="clear">Clear List</button>
+    <p id="list-counter">Length of list: 0</p>
+
+
+    <ul id="list-of-text"></ul>
+
+
+<script>
+
+    let textInput = document.querySelector('#new-text')
+    let addButton = document.querySelector('#add-text')
+    let textList = document.querySelector('#list-of-text')
+    let clearButton = document.querySelector('#clear')
+    let listCountShower = document.querySelector('#list-counter')
+
+    let listCounter = 0 // starts my counter at 0
+    const maxElements = 10 // constant (it won't/can't change) set to 10
+
+    document.addEventListener('keyup', function () { // this function makes the enter key (13) react in the same way as
+        if (event.keyCode == 13) { //                   clicking the 'add' button
+            addButton.click()
+        }
+    })
+
+    addButton.addEventListener('click', function() {
+
+        let newText = textInput.value
+
+        if (newText.length == 0) { // if there is no text, nothing happens
+            return
+        }
+
+        if (newText.length > 50) { // if the text is too long, user is alerted of such
+            alert('Text must be 50 characters or less')
+            return // nothing else happens
+        }
+
+        if (listCounter >= maxElements) { // if the counter becomes greater or equal to the constant
+            alert('No more elements can be added') // user is alerted and nothing else happens
+            return
+        }
+
+        listCounter += 1 // counter needs to increase with every addition
+        // console.log(listCounter)
+        listCountShower.innerHTML = `Length of list: ${listCounter}` // changes the element to display the right number
+
+        let newListItem = document.createElement('li') // new list item element
+
+        newListItem.innerHTML = newText // list item is given the new text
+
+        textList.appendChild(newListItem) // added to list
+
+        textInput.value = '' // clears input field
+
+    })
+
+    clearButton.addEventListener('click', function() { // clears list upon click, resets, counter and counter display
+        textList.innerHTML = ''
+        listCounter = 0
+        listCountShower.innerHTML = `Length of list: ${listCounter}`
+    })
+
+
+</script>
+
+</body>
+</html>
