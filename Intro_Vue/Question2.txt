@@ -1,0 +1,7 @@
+This vue warning message signifies that a variable was mentioned
+in the HTML, but it was not declared within the Vue script app
+
+While it may not outright break your page, there is certainly
+something wrong with the code. Either that variable needs to be
+declared within the script, or it should not be mentioned in the HTML
+

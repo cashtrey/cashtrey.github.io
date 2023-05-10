@@ -1,0 +1,16 @@
+#records {
+    max-height: 250px;
+    overflow: scroll;
+}
+
+.Sketching {
+    background-color: saddlebrown;
+}
+
+.Drawing {
+    background-color: royalblue;
+}
+
+.Painting {
+    background-color: seagreen;
+}
